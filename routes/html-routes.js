@@ -7,7 +7,7 @@ const Comment = require('../models/Comment');
 
 module.exports = function(app) {
     app.get('/', function(req, res) {
-        request('https://www.reddit.com/r/worldnews/', function(error, response, html) {
+        request('https://www.reddit.com/r/oneliners/', function(error, response, html) {
             var $ = cheerio.load(html);
             var articles = [];
             var authors = [];
@@ -19,7 +19,7 @@ module.exports = function(app) {
                 });
             });
 
-            
+
             $('a.title').each(function(i, element) {
                 var title = $(element).text();
                 var link  = $(element).attr("href");
@@ -30,12 +30,12 @@ module.exports = function(app) {
                     link: link
                 });
             });
-        
-            var headlines = _.merge(articles, authors); 
+
+            var headlines = _.merge(articles, authors);
             req.session.headlines = headlines;
             res.render('index', {headlines});
         });
-    });    
+    });
 
     app.get('/archive', function(req, res) {
         Archive.find({}, function(error, doc) {

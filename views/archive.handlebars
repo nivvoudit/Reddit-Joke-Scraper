@@ -1,4 +1,4 @@
-<div class='main-container'> 
+<div class='main-container'>
     <div class='container'>
         <nav class="navbar navbar-inverse">
             <ul class="nav navbar-nav">
@@ -7,26 +7,26 @@
             </ul>
         </nav>
         <div class='jumbotron lblue text-center'>
-            <h1>Archives</h1>            
+            <h1>Archives</h1>
         </div>
         <div class='panel panel-default'>
             <ul class='list-group'>
                 {{#each doc}}
                     <li class='list-group-item title'>
                         <a href={{this.link}}><h3 style='margin-right: 20px' class='title-arc left'>{{this.title}}<h3></a>
-                        <h6 style='margin-right: 20px' class='author left'>by {{this.author}}&nbsp&nbsp&nbsp&nbsp{{this.time}}</h6>       
-                        <button class='btn btn-link right add-comment' value={{this.uuid}}>Add Comment</button>    
-                        <button class='btn btn-link right show-comment' value={{this.uuid}}>Show Comments</button>   
-                        <div id={{this.uuid}}> 
+                        <h6 style='margin-right: 20px' class='author left'>by {{this.author}}&nbsp&nbsp&nbsp&nbsp{{this.time}}</h6>
+                        <button class='btn btn-link right add-comment' value={{this.uuid}}>Add Comment</button>
+                        <button class='btn btn-link right show-comment' value={{this.uuid}}>Show Comments</button>
+                        <div id={{this.uuid}}>
                             <div class='input-group input left hide' >
-                                <input type='text' class='form-control comment_input' placeholder="Add Comment"id={{this.uuid}}_input>    
+                                <input type='text' class='form-control comment_input' placeholder="Add Comment"id={{this.uuid}}_input>
                                 <span class="input-group-btn">
                                     <button class="btn btn-secondary submit" type="button" value={{uuid}}>Submit</button>
                                 </span>
                             </div>
                             <div class='comment hide' >
                             </div>
-                        </div>   
+                        </div>
                     </li>
                 {{/each}}
             </ul>
