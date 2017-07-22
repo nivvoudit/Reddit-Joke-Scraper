@@ -1,0 +1,26 @@
+<div class='main-container'>
+    <div class='container'>
+        <nav class="navbar navbar-inverse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/archive">Archive</a></li>
+            </ul>
+        </nav>
+        <div class='jumbotron lblue text-center'>
+            <h1>Reddit One-Liner Jokes</h1>            
+        </div>
+        <div class='panel panel-default'>
+            <ul class='list-group'>
+                {{#each headlines}}
+                    <li class='list-group-item title'>
+                        <button class='btn btn-info left save' value={{this.uuid}}>Save</button>
+                        <a href={{this.link}}><h3 style='margin-right: 20px' class='title'>{{this.title}}<h3></a>
+                        <h6 style='margin-right: 20px' class='author'>by {{this.author}}&nbsp&nbsp&nbsp&nbsp{{this.time}}</h6>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src='js/index.js'></script>
