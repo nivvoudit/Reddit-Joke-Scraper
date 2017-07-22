@@ -1,0 +1,29 @@
+{
+  "name": "reddit_scraper_nivv",
+  "version": "1.0.0",
+  "description": "reddit one-liner joke scraper",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nivvoudit/reddit_scraper_nivv.git"
+  },
+  "author": "nivvoudit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nivvoudit/reddit_scraper_nivv/issues"
+  },
+  "homepage": "https://github.com/nivvoudit/reddit_scraper_nivv#readme"
+}

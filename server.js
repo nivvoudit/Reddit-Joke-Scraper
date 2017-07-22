@@ -19,7 +19,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://heroku_z3npdzdg:d1173albg2b3sllk2281deeom3@ds021299.mlab.com:21299/heroku_z3npdzdg')
+mongoose.connect('mongodb://heroku_3tt987q9:ub6er71kfbf75nfpvlrur06kq7@ds145312.mlab.com:45312/heroku_3tt987q9')
 var db = mongoose.connection;
 
 db.on('error', function(error) {
