@@ -13,7 +13,7 @@ module.exports = function(app) {
                     if (err) console.log(err);
                     else console.log(doc);
                 });
-            }            
+            }
         });
         res.end();
     });

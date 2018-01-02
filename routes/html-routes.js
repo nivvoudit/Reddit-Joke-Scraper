@@ -32,7 +32,8 @@ module.exports = function(app) {
             });
 
             var headlines = _.merge(articles, authors);
-            req.session.headlines = headlines;
+            req.session.headlines = headlines.splice(0, 2);
+            // This line removes the first 2 elements which were not of the same joke format//
             res.render('index', {headlines});
         });
     });
